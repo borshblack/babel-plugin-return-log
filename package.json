@@ -6,5 +6,15 @@
   "repository": "https://github.com/borshblack/babel-plugin-return-log",
   "author": "Nogotkov Andrey",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "dev": "nodemon --watch src/ --watch plugins/ dist/ --exec \"npm run build:babel && node ./dist/index.js\"",
+    "build:babel": "babel src -d dist"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/template": "^7.22.5",
+    "babel-preset-minify": "^0.5.2"
+  }
 }
