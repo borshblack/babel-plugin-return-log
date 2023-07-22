@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-return-log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple the babel plugin for display a return expression with console.log",
   "main": "index.js",
   "repository": "https://github.com/borshblack/babel-plugin-return-log",
