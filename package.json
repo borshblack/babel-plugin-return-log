@@ -13,7 +13,7 @@
   "private": false,
   "scripts": {
     "dev:test": "nodemon --watch test/ --watch plugins/ dist/ --exec \"npm run build:babel && node ./dist/index.js\"",
-    "build:plugin": "babel plugins -d lib",
+    "build:plugin": "babel plugins -d lib --out-file-extension .cjs",
     "build:test:babel": "babel test -d dist"
   },
   "dependencies": {
