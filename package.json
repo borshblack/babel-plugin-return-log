@@ -1,20 +1,28 @@
 {
   "name": "babel-plugin-return-log",
-  "version": "1.0.3",
+  "version": "1.0.31",
   "description": "Simple the babel plugin for display a return expression with console.log",
-  "main": "index.js",
   "repository": "https://github.com/borshblack/babel-plugin-return-log",
   "author": "Nogotkov Andrey",
   "license": "MIT",
+  "main": "lib/index.js",
+  "type": "commonjs",
+  "files": [
+    "lib"
+  ],
   "private": false,
   "scripts": {
-    "dev": "nodemon --watch src/ --watch plugins/ dist/ --exec \"npm run build:babel && node ./dist/index.js\"",
-    "build:babel": "babel src -d dist"
+    "dev:test": "nodemon --watch test/ --watch plugins/ dist/ --exec \"npm run build:babel && node ./dist/index.js\"",
+    "build:plugin": "babel plugins -d lib",
+    "build:test:babel": "babel test -d dist"
   },
   "dependencies": {
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
     "@babel/template": "^7.22.5",
     "babel-preset-minify": "^0.5.2"
+  },
+  "engines": {
+    "node": "<= 12.0.0"
   }
 }
